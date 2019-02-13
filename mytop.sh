@@ -1317,8 +1317,8 @@ sub GetData()
             print YELLOW() if $thread->{Command} eq 'Query';
             print WHITE()  if $thread->{Command} eq 'Sleep';
             print GREEN()  if $thread->{Command} eq 'Connect';
-            print BOLD() if $thread->{Time} > $config{slow};
-	          print MAGENTA() if $thread->{Time} > $config{long};
+            print BLUE() if $thread->{Time} > $config{slow};
+	    print MAGENTA() if $thread->{Time} > $config{long};
             print RED()    if $thread->{State} && $thread->{State} eq 'Locked';
         }
 
